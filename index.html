@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/greek-topics/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Изучение греческого</title>
+    <title>Изучение греческого языка</title>
+    
     <!-- Скрипт для маршрутизации GitHub Pages SPA -->
     <script type="text/javascript">
       (function(l) {
@@ -18,10 +19,29 @@
         }
       }(window.location))
     </script>
-    <script type="module" crossorigin src="/greek-topics/assets/index-C0ysFeh9.js"></script>
-    <link rel="stylesheet" crossorigin href="/greek-topics/assets/index-BGbX6MLt.css">
+    
+    <!-- Скрипт обнаружения ошибок загрузки -->
+    <script type="text/javascript">
+      window.addEventListener('error', function(e) {
+        console.error('Ошибка загрузки ресурса:', e);
+        // Проверяем, загрузился ли React
+        if (typeof React === 'undefined') {
+          document.body.innerHTML = '<div style="padding: 20px; text-align: center;"><h2>Ошибка загрузки приложения</h2>' + 
+            '<p>Попробуйте обновить страницу или очистить кэш браузера</p>' +
+            '<button onclick="location.reload(true)" style="padding: 10px 20px; margin-top: 20px; cursor: pointer;">Обновить страницу</button></div>';
+        }
+      }, true);
+    </script>
+    <script type="module" crossorigin src="/greek-topics/assets/index.CTVCR5Vl.js"></script>
+    <link rel="stylesheet" crossorigin href="/greek-topics/assets/index.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Временное содержимое до загрузки React -->
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
+        <h2>Загрузка приложения...</h2>
+        <p>Если эта страница не исчезает, возможно, возникли проблемы с загрузкой</p>
+      </div>
+    </div>
   </body>
 </html>
